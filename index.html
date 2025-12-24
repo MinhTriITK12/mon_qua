@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="icon" type="image/png" href="image/favicon.ico">
 		<title>Lời chúc tặng Hân</title>    
@@ -16,7 +16,7 @@
 </head>
     <body>
  
-			<audio autoplay="autoplay" >
+            <audio id="player" autoplay="autoplay" loop="loop">
 					<source src="music/1224.mp3" type="audio/mp3" />
             </audio> 
 
@@ -100,6 +100,7 @@
         var hold = 1;
 
         canvas.click(function(e) {
+            document.getElementById('player').play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
